@@ -1,0 +1,100 @@
+.display-modal {
+    display: block;
+}
+.hide-modal {
+    display: none;
+}
+.modal-window {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 999;
+}
+.modal-body {
+    width: 454px;
+    height: 404px;
+    margin: calc(50vh - 180px) auto;
+    background-color: #fff;
+}
+.modal-body > div {
+    display: inline-block;
+}
+.modal-button-container {
+    height: 100%;
+    width: 49.5px;
+    position: relative;
+    top: -336px;
+}
+.modal-button-container > div {
+    height: 55px;
+    position: relative;
+    top: 152.5px;
+    color: rgba(42, 47, 54,0.55);
+}
+.modal-button-container > div:hover:not(.disabled-button) {
+    color: #2A2F36;
+}
+.disabled-button svg{
+    color: rgba(42, 47, 54,0.25)
+}
+.modal-content-container {
+    width: 355px;
+    position: relative;
+}
+.modal-content-container > div {
+    width: 100%;
+}
+.modal-title {
+    height: 45px;
+    margin: 0 auto;
+    line-height: 45px;
+}
+.modal-footer {
+    height: 45px;
+    margin: 0 auto;
+}
+.modal-content {
+    height: 314px;
+}
+.calendar-table {
+    width: 320px;
+    height: 314px;
+    margin: auto;
+}
+.calendar-table th {
+    height: 40px;
+}
+.calendar-table thead th {
+    width: 14.28%;
+}
+.calendar-table tbody {
+    height: 220px;
+}
+td, th{
+    display: table-cell;
+}
+.cell-disabled{
+    color: rgba(42, 47, 54,0.3);
+}
+td button {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 50%;
+    font-family: 'Futura';
+}
+button:focus{
+    outline: none;
+}
+.date-selected{
+    background-color: rgba(255, 140, 8, 0.8)!important;
+    color: #fff;
+}
+.todays-date{
+    background-color: rgba(42, 47, 54,0.3);
+    color: #fff;
+}

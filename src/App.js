@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/header.js';
+import DateTimeForm from './components/datetimeform.js';
+import ClientDetails from './components/clientdetails.js';
+import FormFooter from './components/form-footer.js';
+
+import './css/App.css';
+import './css/fonts.css';
+
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Header />
+                <DateTimeForm />
+                <ClientDetails />
+                <FormFooter />
+            </div>
+        )
+    }
 }
 
 export default App;

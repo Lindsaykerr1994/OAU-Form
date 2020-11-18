@@ -1,0 +1,56 @@
+.buttons-container {
+    width: 430px;
+    margin: auto;
+}
+#group-switch {
+    width: 400px;
+}
+#group-switch > div {
+    width: 143px;
+    margin-left: 143.5px;
+}
+.number-button{
+    height: 24px;
+    width: 24px;
+    position: relative;
+    top: 2px;
+    left: 242px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid transparent;
+}
+.number-button svg {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+.number-button:hover {
+    background-color: rgba(42,47,54,0.8);
+    color: #fff;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+}
+.submit-button, .modal-button {
+    height: 30px;
+    width: 132px;
+    margin: 10px 10px 10px auto;
+    background-color: #FF8C08;
+    color: #2A2F36;
+    text-align: center;
+    border: 2px solid transparent;
+}
+.submit-button {
+    margin-bottom: 20px;
+}
+.submit-button:hover, .modal-button:hover {
+    border-color: #2A2F36;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+}
+.modal-button {
+    margin: 6px 10px;
+}
+.modal-button:nth-child(2) {
+    margin-left: 53px;
+}

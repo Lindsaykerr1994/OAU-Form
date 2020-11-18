@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+.font-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+@font-face {
+    font-family: 'FuturaLight';
+    src: local('Futura-Light'),
+        url('../fonts/Futura-Light.woff2') format('woff2'),
+        url('../fonts/Futura-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+.font-futura-light {
+    font-family: 'FuturaLight', sans-serif;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/Futura-Medium.woff2') format('woff2'),
+        url('../fonts/Futura-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+.font-futura {
+    font-family: 'Futura', sans-serif;
+}
+/* Text Transformation */
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+/* Font Sizes */
+.font-65 {
+    font-size: 65px;
+}
+.font-55 {
+    font-size: 55px;
+}
+.font-25 {
+    font-size: 25px;
+}
+.font-20 {
+    font-size: 20px;
+}
+.font-17 {
+    font-size: 17px;
+}
+.font-15 {
+    font-size: 15px;
+}
+.font-12 {
+    font-size: 12px;
+}
+.spacing-12{
+    letter-spacing: 1.2px;
+}
+/* Font Weight */
+.font-500 {
+    font-weight: 500;
+}
+/* Text Color */
+.text-light-grey {
+    color: #687485;
+}
+.text-orange{
+    color: #FF8C08;
+}

@@ -1,0 +1,54 @@
+.App {
+    width: 492px;
+    border: 1px solid #2A2F36;
+    margin: auto;
+}
+.header {
+    text-align: center;
+}
+.display-group {
+    display: none;
+}
+.client-details-container {
+    min-height: 501.2px;
+    padding-bottom: 10px;
+}
+.form-footer {
+    position: relative;
+    bottom: 0px;
+    height: 97px;
+}
+#error-message-container{
+    height:35px;
+}
+/* General Styling */
+.inline-block {
+    display: inline-block;
+}
+.display-none {
+    display: none;
+}
+.client-form p {
+    margin: 0 auto 8px 31px;
+}
+.ml-31 {
+    margin-left: 31px !important;
+}
+.ml-10 {
+    margin-left: 10px !important;
+}
+.mb-0 {
+    margin-bottom: 0px;
+}
+.w-75 {
+    width: 314px;
+}
+.w-75 input {
+    width: 298px;
+}
+.w-25 {
+    width: 102px;
+}
+.w-25 input {
+    width: 86px;
+}
