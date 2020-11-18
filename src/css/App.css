@@ -1,6 +1,6 @@
 .App {
     width: 492px;
-    border: 1px solid #2A2F36;
+    border: 1px solid transparent;
     margin: auto;
 }
 .header {
