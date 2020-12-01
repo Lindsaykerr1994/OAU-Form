@@ -138,7 +138,7 @@ class DateOfBirthInput extends Component {
                     type="text" name="DOB-input"
                     placeholder="D.O.B"
                     maxLength="10"
-                    className="DOB-input"
+                    id="DOB-input"
                     data-valid="1"
                     onChange={this.newValidateDOB}
                     onKeyUp={this.testFun}

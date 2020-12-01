@@ -13,10 +13,16 @@
 .datetime-input input, .w-50 input {
     width: 192px !important;
 }
-.datetime-input:nth-of-type(1), .w-50:nth-of-type(odd), .w-75{
+.w-50:nth-of-type(odd), .w-75{
     margin-left: 31px;
 }
-.datetime-input:nth-of-type(2), .w-50:nth-of-type(even), .w-25{
+.w-50:nth-of-type(even), .w-25{
+    margin-left: 10px;
+}
+#time-input-container {
+    margin-left: 31px;
+}
+#date-input-container {
     margin-left: 10px;
 }
 .form-input input {
@@ -52,9 +58,6 @@
 .text-input input::placeholder{
     font-family: 'FuturaLight';
 }
-#solo-injury-details:disabled, #solo-medicine-details:disabled {
-    background-color: rgba(42, 47, 54, 0.1);
-}
-#no-declaration-container{
-    width: 430px;
+.comments-form {
+    height: 136px;
 }

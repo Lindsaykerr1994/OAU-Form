@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
+import '../../css/any-checkbox.css';
+
 
 class TimeInput extends Component {
     constructor() {
@@ -59,14 +61,36 @@ class TimeInput extends Component {
             }
         }
     }
+    disableTime() {
+        if($("#time-input").attr('disabled')==="disabled"){
+            $("#time-input").removeAttr('disabled');
+        } else {
+            $("#time-input").attr('disabled', 'disabled');
+        }
+    }
     render() {
         return (
-            <div id="time-input-container" className="form-input datetime-input inline-block">
-                <input 
-                    type="text" maxLength="5"
-                    id="time-input" name="timeInput"
-                    placeholder="Time"
-                    onKeyUp={this.validateTime}></input>
+            <div className="inline-block">
+                <div id="time-input-container" className="form-input datetime-input">
+                    <input 
+                        type="text" maxLength="5"
+                        id="time-input" name="timeInput"
+                        placeholder="Time"
+                        onKeyUp={this.validateTime}></input>
+                </div>
+                <div
+                    id="any-time-container" 
+                    className="any-container">
+                    <label htmlFor="any-time"
+                            className="any-checkbox">
+                        <input
+                            type="checkbox" className=""
+                            id="any-time" name="any-time"
+                            onClick={this.disableTime}></input>
+                        <span className="any-label"></span>
+                    </label>
+                    <p className="inline-block font-futura">Any Time</p>
+                </div>
             </div>
         )
     }

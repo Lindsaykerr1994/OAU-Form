@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-
 import '../css/modal-styling.css';
 
 import DatePickerModal from './additionalfeatures/modal-body.js';
@@ -31,12 +30,17 @@ class DateInput extends Component {
         });
     }
     showModal(){
-        if(this.state.displayModal===false){
-            this.setState({
-                displayModal: !this.state.displayModal
-            });
-        };
-        document.addEventListener("keydown", this.escHideModal);
+        if($("#date-input").attr('disabled')==="disabled"){
+            console.log("disabled");
+        } else {
+            if(this.state.displayModal===false){
+                this.setState({
+                    displayModal: !this.state.displayModal
+                });
+            };
+            document.addEventListener("keydown", this.escHideModal);
+        }
+        
     }
     hideModal(event){
         if(event.target===$(".modal-window")[0]||event.target===$("#close-modal-button")[0]){
@@ -79,7 +83,7 @@ class DateInput extends Component {
         });
     }
     cancelDate() {
-        var santaAnna = $("#dateInput").val();
+        var santaAnna = $("#date-input").val();
         if(santaAnna.length>0){;
             this.setState({
                 dateSelected: []
@@ -92,25 +96,50 @@ class DateInput extends Component {
             console.log("no")
         }
     }
+    disableDate() {
+        if($("#date-input").attr('disabled')==="disabled"){
+            console.log("enable")
+            $("#date-input").removeAttr('disabled');
+        } else {
+            console.log("disable")
+            $("#date-input").attr('disabled', 'disabled');
+        }
+    }
     
     render() {
         return (
-            <div id="date-input-container" className="form-input datetime-input inline-block" onClick={this.showModal}>
-                <input 
-                    type="text" name="date-input" 
-                    id="date-input"
-                    placeholder="Date"
-                    readOnly
-                    >
-                </input>
-                <DatePickerModal
-                    todaysDate={this.state.todaysDate}
-                    displayModal={this.state.displayModal}
-                    selectDate={this.selectDate}
-                    hideModal={this.hideModal}
-                    dateSelected={this.state.dateSelected}
-                    confirmDate={this.confirmDate}
-                    cancelDate={this.cancelDate}/>
+            <div className="inline-block">
+                <div id="date-input-container" className="form-input datetime-input inline-block" onClick={this.showModal}>
+                    <input 
+                        type="text" name="date-input" 
+                        id="date-input"
+                        placeholder="Date"
+                        readOnly
+                        disabled = ""
+                        >
+                    </input>
+                    <DatePickerModal
+                        todaysDate={this.state.todaysDate}
+                        displayModal={this.state.displayModal}
+                        selectDate={this.selectDate}
+                        hideModal={this.hideModal}
+                        dateSelected={this.state.dateSelected}
+                        confirmDate={this.confirmDate}
+                        cancelDate={this.cancelDate}/>
+                </div>
+                <div 
+                    id="any-date-container"
+                    className="any-container">
+                    <label htmlFor="any-date"
+                            className="any-checkbox">
+                        <input
+                            type="checkbox" className=""
+                            id="any-date" name="any-date"
+                            onClick={this.disableDate}></input>
+                        <span className="any-label"></span>
+                    </label>
+                    <p className="inline-block font-futura">Any Date</p>
+                </div>
             </div>
         )
     }

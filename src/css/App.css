@@ -10,7 +10,7 @@
     display: none;
 }
 .client-details-container {
-    min-height: 501.2px;
+    min-height: 170px;
     padding-bottom: 10px;
 }
 .form-footer {
@@ -18,8 +18,15 @@
     bottom: 0px;
     height: 97px;
 }
-#error-message-container{
-    height:35px;
+#group-switch-container {
+    min-height: 50px;
+}
+#participant-number-container {
+    width: 240px;
+    margin: auto;
+}
+#participant-number-container p {
+    margin: auto 10px 20px 10px;
 }
 /* General Styling */
 .inline-block {
@@ -37,8 +44,14 @@
 .ml-10 {
     margin-left: 10px !important;
 }
+.mt-0 {
+    margin-top: 0px;
+}
 .mb-0 {
     margin-bottom: 0px;
+}
+.mb-8 {
+    margin-bottom: 8px;
 }
 .w-75 {
     width: 314px;
